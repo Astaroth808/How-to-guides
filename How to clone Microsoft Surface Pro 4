@@ -1,0 +1,35 @@
+How to clone Microsoft Surface Pro 4
+
+Tools / Items Needed:
+•	A Microsoft Surface Pro 4
+•	CloneZilla bootable USB/CD/DVD
+•	External SATA drive dock or external hard drive *ensure size of the drive exceeds Surface Pro 4’s internal drive.
+•	USB Hub with external power *ensure to have minimum of 4 open ports*
+•	External Keyboard and Mouse.
+•	BitLocker Key *MUST HAVE: if the drive is BitLocker enabled*
+
+Step 1: Shutdown Surface Pro 4 if it’s on.
+Step 2: Connect USB Hub to the Surface Pro 4, connect external keyboard, mouse, and external drive *if using a SATA dock connect the dock*, and CloneZilla bootable USB *if bootable media is on a CD/DVD connect the CD/DVD drive*
+Step 3: Hold down the Volume Up button while pressing power. Once turned on and the “Surface” icon is displayed, let go of the Volume UP button.
+Step 4: UEFI setting should be displayed. Select Security Tab. Ensure to turn OFF Secure Boot > Change Configuration > None > Ok.  Ensure to turn OFF Trusted Platform Module (TPM)
+Step 5: Select Boot Configuration Tab > click and drag “USB Storage” to the top. Ensure “Enable Boot from USB devices” is switched to ON
+Step 6: Exit UEFI and select “Restart Now”.
+Step 7: Boot up the Surface Pro 4 by holding down the Volume Down button while pressing power. Once completely booted, you would be greeted with CloneZilla Live boot menu.
+Step 8: Select Clonezilla Live (Default settings, VGA 1024x768) or respective resolution settings.
+Step 9: Select language en_US.UTF-8 English.
+Step 10: Select keyboard layout the default should be already selected press OK.
+Step 11: Select Start_Clonezilla Start Clonezilla.
+Step 12: Select device-device work directly from disk or partition to a disk or partition.
+Step 13: Select Beginner Beginner mode: Accept the default options.
+Step 14: Select disk_to_local_disk local_disk_to_local_disk_clone
+Step 15: Choose source disk *IMPORTANT make sure you select the correct disk*
+Step 16: Choose target disk *IMPORTANT!! Will WIPE target drive*
+Step 17: Select Skip checking/repairing source file system
+Step 18: Select which action to do after cloning is completed.
+Step 19: At this point Clonezilla is going to prompt you with several yes and no prompt to confirm cloning action.
+Step 20: After the clone drive has completed, connect the cloned drive to F.R.E.D.’s tableau write blocker. *Ensure the F.R.E.D. is on Windows10. Because a BitLocker enabled windows 10 system only can be decrypted by a higher or same version of windows 10*
+Step 21: Once the drive is connected a prompt will pop up displaying “*:\is not accessible. Access is denied”. 
+Step 22: A gold lock and key would be displayed for the cloned drive, at this point right click on the drive and select the “Unlock Drive” option.
+Step 23: Enter the BitLocker key (built in error check will inform you which of the 8 sections is incorrectly entered) in to the pop-up box, press “Unlock” *after pressing unlock it could take up to 5 minutes*
+Step 24: A Explore window will display the contains of the BitLocked drive after decryption. *Gold lock and key will change to Silver unlocked lock and key*
+Step 25: Open EnCase Imager > Add Local Device (only “Detect Tableau Hardware” should be checked) > Check select the OS Partition of the Bitlockered drive > Finish.
