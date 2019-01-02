@@ -1,0 +1,9 @@
+Tools / Items Needed:
+•	A Laptop computer / workstation with Windows 10 installed.
+
+Step 1: Press windows and r key simultaneously to bring up the Run command dialog box.  
+Step 2: Type in “gpedit.msc” without the quotation marks. Press “Ok”.
+Step 3: Select Computer Configuraton > Administrative Templates > Windows Components > BitLocker Drive Encryption > Removable Data Drives
+Step 4: Right click on “Deny write access to removable drives not protected by BitLocker”.
+Step 5: Change value to “Disable”.
+Step 6: Exit out of Group Policy Management.
